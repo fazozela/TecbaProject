@@ -1,0 +1,38 @@
+<div>
+
+  <form class="form-container"
+        autocomplete="off"
+        [formGroup]="miFormulario"
+        (ngSubmit)="login()">
+
+    <span class="p-input-icon-left">
+      <i class="pi pi-envelope"></i>
+      <input type="text"
+             pInputText
+             placeholder="usuario@tecba.edu.bo"
+             formControlName="email">
+    </span>
+
+    <span class="p-input-icon-left">
+      <i class="pi pi-key"></i>
+      <input type="password"
+             pInputText
+             placeholder="contraseña"
+             formControlName="password">
+    </span>
+
+    <div class="button-container">
+      <button type="submit"
+              pButton
+              [disabled]="miFormulario.invalid"
+              label="Login">
+      </button>
+    </div>
+
+  </form>
+
+  <div class="flex justify-content-center">
+      <span>Tienes dudas? <a>CONTACTANOS</a></span>
+  </div>
+
+</div>

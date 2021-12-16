@@ -1,0 +1,22 @@
+<div class="layout-wrapper" [ngClass]="{'layout-static': app.menuMode === 'static'}">
+
+    <!-- <h1>Hola</h1> -->
+
+    <div class="layout-main">
+
+        <app-menu></app-menu>
+
+        <app-breadcrumb></app-breadcrumb>
+
+        <div class="layout-main-content">
+
+            <router-outlet></router-outlet>
+
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+   <!-- <app-config></app-config> -->
+
+</div>

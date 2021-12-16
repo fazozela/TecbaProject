@@ -4,7 +4,7 @@ import {CustomerService} from '../service/customerservice';
 import {Product} from '../domain/product';
 import {ProductService} from '../service/productservice';
 import {Table} from 'primeng/table';
-import {AppBreadcrumbService} from '../../../services/BreadCrumbService/app.breadcrumb.service';
+import { AppBreadcrumbService } from 'src/app/services/BreadCrumbService/app.breadcrumb.service';
 
 @Component({
     templateUrl: './tabledemo.component.html',

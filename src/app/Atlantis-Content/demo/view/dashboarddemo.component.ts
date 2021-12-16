@@ -3,7 +3,7 @@ import {EventService} from '../service/eventservice';
 import {PrimeIcons} from 'primeng/api';
 import {Customer} from '../domain/customer';
 import {CustomerService} from '../service/customerservice';
-import {AppBreadcrumbService} from '../../../services/BreadCrumbService/app.breadcrumb.service';
+import { AppBreadcrumbService } from 'src/app/services/BreadCrumbService/app.breadcrumb.service';
 
 @Component({
     templateUrl: './dashboard.component.html',

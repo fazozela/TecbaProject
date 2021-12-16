@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Product} from '../demo/domain/product';
 import {ProductService} from '../demo/service/productservice';
 import {ConfirmationService, MessageService} from 'primeng/api';
-import {AppBreadcrumbService} from '../../services/BreadCrumbService/app.breadcrumb.service';
+import { AppBreadcrumbService } from 'src/app/services/BreadCrumbService/app.breadcrumb.service';
 
 @Component({
     templateUrl: './app.crud.component.html',
