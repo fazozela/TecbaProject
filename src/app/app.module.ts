@@ -131,7 +131,6 @@ import { AppMainComponent } from './shared/main/app.main.component';
         AppBreadcrumbComponent,
         AppConfigComponent,
         AppMainComponent,
-
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

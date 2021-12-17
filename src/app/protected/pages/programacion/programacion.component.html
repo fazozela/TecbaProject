@@ -7,10 +7,37 @@
 </div>
 
 <div class="grid">
-    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4">
+    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4" *ngFor="let item of programaciones">
         <div class="card">
             <div class="card-title card">
-                <p>FUA-101 | FUNDAMENTOS DE ADMINISTRACION</p>
+                <p>{{ item.name_subject }}</p>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Código</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.cod_subject }}</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Curso</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.course_subject }}</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Turno</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.path_programation }}</p>
+                </div>
             </div>
 
             <div class="grid">
@@ -18,7 +45,16 @@
                     <p class="programacion-title">Inicio</p>
                 </div>
                 <div class="col flex justify-content-start">
-                    <p>2021-03-15</p>
+                    <p>{{ item.start_subjectassign }}</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Fin</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.end_subjectassign }}</p>
                 </div>
             </div>
 
@@ -27,7 +63,7 @@
                     <p class="programacion-title">Modalidad</p>
                 </div>
                 <div class="col flex justify-content-start">
-                    <p>Anual</p>
+                    <p>{{ item.modality_subjectassign }}</p>
                 </div>
             </div>
 
@@ -36,7 +72,7 @@
                     <p class="programacion-title">Docente</p>
                 </div>
                 <div class="col flex justify-content-start">
-                    <p>Lic. Alex Castro</p>
+                    <p>{{ item.name_teacher }} {{ item.first_teacher }} {{ item.second_teacher }}</p>
                 </div>
             </div>
 
@@ -46,27 +82,14 @@
                 </div>
                 <div class="col flex justify-content-start">
                     <p>
-                        <a href="">
-                            Click Aqui
+                        <a href="#" target="_blank">
+                            Ir al grupo
                         </a>
                     </p>
                 </div>
             </div>
 
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Clases Grabadas</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Revisar
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
+            <!-- <div class="grid">
                 <div class="col flex justify-content-center">
                     <p-messages severity="info" style="width: 70%;">
                         <ng-template pTemplate>
@@ -85,422 +108,7 @@
                     </p-messages>
                 </div>
 
-            </div>
-
-        </div>
-    </div>
-
-    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4">
-        <div class="card">
-            <div class="card-title card">
-                <p>FUA-101 | FUNDAMENTOS DE ADMINISTRACION</p>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Inicio</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>2021-03-15</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Modalidad</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Anual</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Docente</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Lic. Alex Castro</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Grupo Whatsapp</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Click Aqui
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Clases Grabadas</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Revisar
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-center">
-                    <p-messages severity="info" style="width: 70%;">
-                        <ng-template pTemplate>
-                            <div class="grid">
-                                <div class="col flex justify-content-end">
-                                    <p class="programacion-title">
-                                        Tercer Parcial:
-                                        <a href="">
-                                            2021-10-11 | 17:00
-                                        </a>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-messages>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4">
-        <div class="card">
-            <div class="card-title card">
-                <p>FUA-101 | FUNDAMENTOS DE ADMINISTRACION</p>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Inicio</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>2021-03-15</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Modalidad</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Anual</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Docente</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Lic. Alex Castro</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Grupo Whatsapp</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Click Aqui
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Clases Grabadas</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Revisar
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-center">
-                    <p-messages severity="info" style="width: 70%;">
-                        <ng-template pTemplate>
-                            <div class="grid">
-                                <div class="col flex justify-content-end">
-                                    <p class="programacion-title">
-                                        Tercer Parcial:
-                                        <a href="">
-                                            2021-10-11 | 17:00
-                                        </a>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-messages>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4">
-        <div class="card">
-            <div class="card-title card">
-                <p>FUA-101 | FUNDAMENTOS DE ADMINISTRACION</p>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Inicio</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>2021-03-15</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Modalidad</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Anual</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Docente</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Lic. Alex Castro</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Grupo Whatsapp</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Click Aqui
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Clases Grabadas</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Revisar
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-center">
-                    <p-messages severity="info" style="width: 70%;">
-                        <ng-template pTemplate>
-                            <div class="grid">
-                                <div class="col flex justify-content-end">
-                                    <p class="programacion-title">
-                                        Tercer Parcial:
-                                        <a href="">
-                                            2021-10-11 | 17:00
-                                        </a>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-messages>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4">
-        <div class="card">
-            <div class="card-title card">
-                <p>FUA-101 | FUNDAMENTOS DE ADMINISTRACION</p>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Inicio</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>2021-03-15</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Modalidad</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Anual</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Docente</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Lic. Alex Castro</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Grupo Whatsapp</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Click Aqui
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Clases Grabadas</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Revisar
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-center">
-                    <p-messages severity="info" style="width: 70%;">
-                        <ng-template pTemplate>
-                            <div class="grid">
-                                <div class="col flex justify-content-end">
-                                    <p class="programacion-title">
-                                        Tercer Parcial:
-                                        <a href="">
-                                            2021-10-11 | 17:00
-                                        </a>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-messages>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4">
-        <div class="card">
-            <div class="card-title card">
-                <p>FUA-101 | FUNDAMENTOS DE ADMINISTRACION</p>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Inicio</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>2021-03-15</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Modalidad</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Anual</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Docente</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>Lic. Alex Castro</p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Grupo Whatsapp</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Click Aqui
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Clases Grabadas</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="">
-                            Revisar
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-center">
-                    <p-messages severity="info" style="width: 70%;">
-                        <ng-template pTemplate>
-                            <div class="grid">
-                                <div class="col flex justify-content-end">
-                                    <p class="programacion-title">
-                                        Tercer Parcial:
-                                        <a href="">
-                                            2021-10-11 | 17:00
-                                        </a>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-messages>
-                </div>
-
-            </div>
+            </div> -->
 
         </div>
     </div>

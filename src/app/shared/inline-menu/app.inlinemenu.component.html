@@ -1,12 +1,7 @@
 <div [ngClass]="{'layout-inline-menu': true, 'layout-inline-menu-active':appMain.activeInlineProfile}" *ngIf="!appMain.isMobile() && (appMain.isStatic() || appMain.isSlim() || appMain.isSidebar())">
     <a class="layout-inline-menu-action flex flex-row align-items-center" (click)="appMain.activeInlineProfile = !appMain.activeInlineProfile">
         <img src="../../assets/layout/images/profile-image.png" alt="avatar" style="width: 44px; height: 44px;">
-
         <span class="layout-inline-menu-text flex flex-column ml-2">{{ usuario.Users_name_login }}</span>
-
-        <!-- <span class="layout-inline-menu-text1 flex flex-column ml-2">{{ usuario.Users_career_login }}</span>
-
-        <span class="layout-inline-menu-text2 flex flex-column ml-2">{{ usuario.Users_ci_login }}</span> -->
         <i class="layout-inline-menu-icon pi pi-angle-down ml-auto"></i>
     </a>
 
@@ -15,12 +10,6 @@
             <a class="flex flex-row align-items-center" type="button" (click)="logout()">
                 <i class="pi pi-power-off pi-fw"></i>
                 <span>Logout</span>
-            </a>
-        </li>
-        <li class="layout-inline-menu-action-item">
-            <a class="flex flex-row align-items-center">
-                <i class="pi pi-user pi-fw"></i>
-                <span>Profile</span>
             </a>
         </li>
     </ul>

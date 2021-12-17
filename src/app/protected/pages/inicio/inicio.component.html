@@ -7,22 +7,17 @@
 </div>
 
 <div class="grid">
-    <div class="sm:col-12 md:col-12 lg:col-3 xl:col-3">
-        <div style="background: white;">
-            <p-card header="Titulo anuncio" subheader="01-11-2021">
-                <ng-template pTemplate="header">
-                    <img alt="Card" src="../../../assets/images/paisaje.jpeg">
-                </ng-template>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-                    deserunt
-                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-                </p>
-            </p-card>
+    <div class="sm:col-12 md:col-12 lg:col-3 xl:col-3" *ngFor="let item of anuncios">
+        <div style="background: white; border-top: 5px solid #464646;">
+            <div>
+                <p-card header="{{item.title_release}}" subheader="{{item.date_release | date}}">
+                    <p>
+                        {{ item.sms_release }}
+                    </p>
+                </p-card>
+            </div>
         </div>
-
     </div>
-
-
 </div>
 
 

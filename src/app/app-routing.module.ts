@@ -11,10 +11,10 @@ const routes: Routes =
             path: 'inicio',
             loadChildren: () => import('./protected/protected.module').then(m => m.ProtectedModule)
         },
-        {
-            path: 'docentes',
-            loadChildren: () => import('./protected-docentes/protected-docentes.module').then(m => m.ProtectedDocentesModule)
-        },
+        // {
+        //     path: 'docentes',
+        //     loadChildren: () => import('./protected-docentes/protected-docentes.module').then(m => m.ProtectedDocentesModule)
+        // },
         {
             path: '**',
             redirectTo: 'auth'

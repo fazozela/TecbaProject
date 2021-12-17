@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LibretaResponse } from '../../interfaces/libreta.interface';
+import { LibretaService } from '../../services/libreta.service';
 
 @Component({
   selector: 'app-libreta',
@@ -7,48 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibretaComponent implements OnInit {
 
-libreta =
-[
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        requisito: 'FUA-101',
-        estado: 'APROBADO'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        requisito: 'FUA-101',
-        estado: 'APROBADO'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        requisito: 'FUA-101',
-        estado: 'PROGRAMADO'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        requisito: 'FUA-101',
-        estado: 'PROGRAMADO'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        requisito: 'FUA-101',
-        estado: 'APROBADO'
-    },
-]
+    libreta: LibretaResponse[] = [];
 
-  constructor() { }
+    constructor(private libretaService: LibretaService) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.getlibreta();
+    }
+
+    getlibreta() {
+        return this.libretaService.getLibreta()
+        .subscribe(res => {
+            this.libreta = res.response;
+        })
+    }
 
 }

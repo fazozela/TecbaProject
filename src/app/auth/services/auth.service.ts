@@ -29,6 +29,8 @@ export class AuthService {
       .pipe(
         tap(resp => {
           if (resp.error === false) {
+            localStorage.setItem('token', resp.response.token);
+            localStorage.setItem('ci', resp.response.datos.Users_ci_login.toString());
             this._usuario = {
               Users_name_login: resp.response.datos.Users_name_login,
               Users_career_login: resp.response.datos.Users_career_login,
@@ -39,6 +41,22 @@ export class AuthService {
         map(resp => resp.error),
         catchError(err => of(err.error.message))
       );
-
   }
+
+  isLoggedIn() {
+   return localStorage.getItem('token');
+  }
+
+  getCI() {
+    return localStorage.getItem('ci');
+  }
+
+  ngOnDestroy() {
+    localStorage.removeItem('token');
+  }
+
+  // validarToken() {
+  //   const url = `${this.baseUrl}/api/login`;
+  // }
+
 }

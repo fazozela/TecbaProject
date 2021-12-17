@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { KadexResponse } from '../../interfaces/kardex.interface';
+import { KardexService } from '../../services/kardex.service';
 
 @Component({
   selector: 'app-kardex',
@@ -7,53 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KardexComponent implements OnInit {
 
-kardex =
-[
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        estado: 'APROBADO',
-        nota: '90',
-        gestion: '2021'
-    },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        estado: 'APROBADO',
-        nota: '90',
-        gestion: '2021'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        estado: 'APROBADO',
-        nota: '90',
-        gestion: '2021'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        estado: 'APROBADO',
-        nota: '90',
-        gestion: '2021'
-        },
-    {
-        sigla: 'GEE-107',
-        materia: 'GESTOR EMPRESARIAL',
-        curso: '1',
-        estado: 'APROBADO',
-        nota: '90',
-        gestion: '2021'
-    },
-]
 
-  constructor() { }
+    kardex: KadexResponse[] = [];
 
-  ngOnInit(): void {
-  }
+    constructor(private kardexService: KardexService) { }
+
+    ngOnInit(): void {
+        this.getKardex();
+    }
+
+    getKardex() {
+        return this.kardexService.getKardex()
+        .subscribe(res => {
+            this.kardex = res.response;
+        })
+    }
+
+
 
 }
