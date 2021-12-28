@@ -67,48 +67,58 @@
                 </div>
             </div>
 
-            <div class="grid">
+            <!-- <div class="grid">
                 <div class="col flex justify-content-end">
                     <p class="programacion-title">Docente</p>
                 </div>
                 <div class="col flex justify-content-start">
                     <p>{{ item.name_teacher }} {{ item.first_teacher }} {{ item.second_teacher }}</p>
                 </div>
-            </div>
-
-            <div class="grid">
-                <div class="col flex justify-content-end">
-                    <p class="programacion-title">Grupo Whatsapp</p>
-                </div>
-                <div class="col flex justify-content-start">
-                    <p>
-                        <a href="#" target="_blank">
-                            Ir al grupo
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <!-- <div class="grid">
-                <div class="col flex justify-content-center">
-                    <p-messages severity="info" style="width: 70%;">
-                        <ng-template pTemplate>
-                            <div class="grid">
-                                <div class="col flex justify-content-end">
-                                    <p class="programacion-title">
-                                        Tercer Parcial:
-                                        <a href="">
-                                            2021-10-11 | 17:00
-                                        </a>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-messages>
-                </div>
-
             </div> -->
+
+
+
+            <div class="grid mt-5">
+                <div class="col flex justify-content-center">
+
+                    <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Ver más.."></p-button>
+                    <p-dialog header="Seguimiento de materia" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
+                        [resizable]="false">
+
+                        <div class="grid">
+                            <div class="col-12 lg:col-3"><b>Materia:</b> {{item.name_subject}}</div>
+                            <div class="col-12 lg:col-3"><b>Sigla:</b> {{item.cod_subject}}</div>
+                            <div class="col-12 lg:col-3"><b>Docente:</b> {{ item.name_teacher }} {{ item.first_teacher }} {{ item.second_teacher }}</div>
+                            <div class="col-12 lg:col-3"><b>Whatsapp:</b> <a href="">  Acceder</a>
+                            </div>
+                        </div>
+
+                        <div class="grid mt-3">
+                            <div class="col-12"><b>Fechas de parciales</b></div>
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-12 lg:col-4">Fecha 1</div>
+                            <div class="col-12 lg:col-4">Fecha 2</div>
+                            <div class="col-12 lg:col-4">Fecha 3</div>
+                        </div>
+
+                        <div class="grid mt-3">
+                            <div class="col-12"><b>Seguimiento de prácticas</b></div>
+                        </div>
+
+                        <p>No es factible para el modo responsivo poner aca las practicas,
+                            DEMASIADA INFORMACION
+                        </p>
+
+                        <ng-template pTemplate="footer">
+                            <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button>
+                        </ng-template>
+                    </p-dialog>
+
+                </div>
+
+            </div>
 
         </div>
     </div>

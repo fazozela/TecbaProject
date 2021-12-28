@@ -1,13 +1,18 @@
-
-<div class="layout-menu-wrapper">
+<div class="layout-menu-wrapper" [ngClass]="{'layout-sidebar-active': appMain.sidebarActive}"
+    (click)="appMain.onSidebarClick($event)" (mouseover)="appMain.onSidebarMouseOver($event)"
+    (mouseleave)="appMain.onSidebarMouseLeave($event)">
     <div class="menu-logo" *ngIf="!appMain.isHorizontal() || appMain.isMobile()">
-        <a href="#" class="logo" >
-            <img [src]="'assets/layout/images/LOGOSAETA.png'">
-        </a>
+
+        <div class="flex justify-content-center align-content-center">
+            <a href="#" class="logo">
+                <img src="../../../assets/images/logotec.png" alt="">
+            </a>
+        </div>
 
         <a href="#" class="menu-pin" (click)="appMain.onToggleMenu($event)">
             <span *ngIf="appMain.isOverlay()" class="pi pi-times"></span>
-            <span *ngIf="appMain.isSidebar() && !appMain.sidebarStatic && appMain.pinActive" class="pi pi-unlock"></span>
+            <span *ngIf="appMain.isSidebar() && !appMain.sidebarStatic && appMain.pinActive"
+                class="pi pi-unlock"></span>
             <span *ngIf="appMain.isSidebar() && appMain.sidebarStatic && appMain.pinActive" class="pi pi-lock"></span>
         </a>
     </div>

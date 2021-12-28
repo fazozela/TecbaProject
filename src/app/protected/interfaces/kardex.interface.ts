@@ -1,11 +1,11 @@
 export interface Kardex {
     error:    boolean;
     message:  string;
-    response: KadexResponse[];
+    response: KardexResponse[];
     status:   number;
 }
 
-export interface KadexResponse {
+export interface KardexResponse {
     name_subject:    string;
     cod_subject:     string;
     course_subject:  number;

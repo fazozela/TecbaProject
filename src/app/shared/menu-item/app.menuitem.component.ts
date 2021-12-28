@@ -3,7 +3,7 @@ import {Router, NavigationEnd} from '@angular/router';
 import {trigger, state, style, transition, animate} from '@angular/animations';
 import {Subscription} from 'rxjs';
 import {filter} from 'rxjs/operators';
-import {MenuService} from '../../services/MenuService/app.menu.service';
+import { MenuService } from 'src/app/services/MenuService/app.menu.service';
 import { AppMainComponent } from '../main/app.main.component';
 
 @Component({

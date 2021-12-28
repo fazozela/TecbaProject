@@ -24,4 +24,16 @@ export class LibretaComponent implements OnInit {
         })
     }
 
+    getColor(status: any) {
+
+        switch (status) {
+            case 'APROBADO': return 'rgba(2,185,213,0.5)';
+            case 'REPROBADO': return 'rgba(234,55,77,0.5)';
+            case 'PROGRAMADO': return 'rgba(255,212,35,0.5)';
+            case 'ABANDONO': return 'rgba(70,70,70,0.2)';
+            default: return 'white';
+        }
+
+    }
+
 }

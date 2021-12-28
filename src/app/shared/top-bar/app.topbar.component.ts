@@ -12,7 +12,7 @@ import { AppMainComponent } from 'src/app/shared/main/app.main.component';
                 </a>
 
                 <a href="#" class="logo">
-                    <img  [src]="'assets/layout/images/logo-'+ (app.colorScheme === 'light' ? 'dark' : 'light') + '.png'">
+                    <img src="../../../assets/images/logotec.png" alt="">
                 </a>
 
                 <a href="#">
@@ -32,37 +32,11 @@ import { AppMainComponent } from 'src/app/shared/main/app.main.component';
                         <ul class="fadeInDown">
                             <li role="menuitem">
                                 <a href="#" (click)="appMain.onTopbarSubItemClick($event)">
-                                    <i class="pi pi-fw pi-user"></i>
-                                    <span>Profile</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" (click)="appMain.onTopbarSubItemClick($event)">
-                                    <i class="pi pi-fw pi-cog"></i>
-                                    <span>Settings</span>
-                                </a>
-                            </li>
-                            <li role="menuitem">
-                                <a href="#" (click)="appMain.onTopbarSubItemClick($event)">
                                     <i class="pi pi-fw pi-sign-out"></i>
                                     <span>Logout</span>
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="topbar-icon pi pi-fw pi-bell"></i>
-                            <span class="topbar-badge">2</span>
-                            <span class="topbar-item-name">Notifications</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="topbar-icon pi pi-fw pi-comment"></i>
-                            <span class="topbar-badge">5</span>
-                            <span class="topbar-item-name">Messages</span>
-                        </a>
                     </li>
                 </ul>
             </div>

@@ -13,21 +13,32 @@
                 <ng-template pTemplate="header">
                     <tr class="tr-header">
                         <th>Materia</th>
-                        <th>Sigla</th>
-                        <th>Curso</th>
-                        <th>Estado</th>
-                        <th>Nota</th>
-                        <th>Gestión</th>
+                        <th class="flex justify-content-center">Sigla</th>
+                        <th class="flex justify-content-center">Curso</th>
+                        <th class="flex justify-content-center">Estado</th>
+                        <th class="flex justify-content-center">Nota</th>
+                        <th class="flex justify-content-center">Gestión</th>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-item>
                     <tr>
-                        <td>{{item.name_subject}}</td>
-                        <td>{{item.cod_subject}}</td>
-                        <td>{{item.course_subject}}</td>
-                        <td>{{item.status_kinterno}}</td>
-                        <td>{{item.score_kinterno}}</td>
-                        <td>{{item.year_kinterno}}</td>
+                        <td [width]="800">{{item.name_subject}}</td>
+                        <td class="flex justify-content-center">
+                            {{item.cod_subject}}
+                        </td>
+                        <td class="flex justify-content-center">
+                            {{item.course_subject}}
+                        </td>
+                        <td class="flex justify-content-center"
+                            [ngStyle]="{'background': getColor(item.status_kinterno), 'font-weight': '400'}">
+                        {{item.status_kinterno}}
+                        </td>
+                        <td class="flex justify-content-center">
+                            {{item.score_kinterno}}
+                        </td>
+                        <td class="flex justify-content-center">
+                            {{item.year_kinterno}}
+                        </td>
 
                     </tr>
                 </ng-template>

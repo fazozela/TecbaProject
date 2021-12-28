@@ -37,6 +37,7 @@ const routes: Routes =
           {path: 'calificaciones', component: CalificacionesComponent},
           {path: 'libreta', component: LibretaComponent},
           {path: 'recursos', component: RecursosComponent},
+          {path: 'saeta', component: SaetaComponent},
           {path: 'docente1', component: Docente1Component},
           {path: 'docente2', component: Docente2Component},
           {path: 'docente3', component: Docente3Component},

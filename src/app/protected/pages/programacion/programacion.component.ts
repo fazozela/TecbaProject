@@ -9,6 +9,8 @@ import { ProgramacionService } from '../../services/programacion.service';
 })
 export class ProgramacionComponent implements OnInit {
 
+  displayModal: boolean;
+
   programaciones: ProgramacionResponse[] = [];
 
   constructor(private programacionService: ProgramacionService) { }
@@ -22,6 +24,10 @@ export class ProgramacionComponent implements OnInit {
     .subscribe(res => {
       this.programaciones = res.response;
     })
+  }
+
+  showModalDialog() {
+      this.displayModal = true;
   }
 
 }

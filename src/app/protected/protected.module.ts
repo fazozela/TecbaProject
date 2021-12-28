@@ -22,6 +22,12 @@ import { Docente7Component } from './pages/docente7/docente7.component';
 import { Docente8Component } from './pages/docente8/docente8.component';
 import { Docente9Component } from './pages/docente9/docente9.component';
 import { Docente10Component } from './pages/docente10/docente10.component';
+import { LunesPipe } from './pipes/lunes.pipe';
+import { MartesPipe } from './pipes/martes.pipe';
+import { MiercolesPipe } from './pipes/miercoles.pipe';
+import { JuevesPipe } from './pipes/jueves.pipe';
+import { ViernesPipe } from './pipes/viernes.pipe';
+import { SabadoPipe } from './pipes/sabado.pipe';
 
 
 
@@ -46,6 +52,12 @@ import { Docente10Component } from './pages/docente10/docente10.component';
     Docente8Component,
     Docente9Component,
     Docente10Component,
+    LunesPipe,
+    MartesPipe,
+    MiercolesPipe,
+    JuevesPipe,
+    ViernesPipe,
+    SabadoPipe
   ],
   exports: [
     InicioComponent,

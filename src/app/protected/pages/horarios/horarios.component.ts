@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HorarioResponse } from '../../interfaces/horario.interface';
+import { HorarioService } from '../../services/horario.service';
 
 @Component({
   selector: 'app-horarios',
@@ -7,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorariosComponent implements OnInit {
 
+  horarios: HorarioResponse[] = [];
 
-  constructor() { }
+  constructor(private horarioService: HorarioService) { }
 
     ngOnInit(): void {
-
+      this.getHorario();
     }
 
-}
+  getHorario() {
+    return this.horarioService.getHorario()
+      .subscribe(res => {
+        this.horarios = res.response;
+    })
+  }
+
+
+  }
+
