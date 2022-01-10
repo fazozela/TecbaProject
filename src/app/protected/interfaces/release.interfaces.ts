@@ -7,6 +7,8 @@ export interface EstudianteRelease {
 
 export interface Release {
     title_release: string;
-    sms_release:   string;
+    sms_release: string;
+    sender_release:    string;
+    important_release: number;
     date_release:  Date;
 }

@@ -24,4 +24,14 @@ export class InicioComponent implements OnInit {
       })
   }
 
+  getColor(status: any) {
+
+      switch (status) {
+          case 1: return 'rgba(234,55,77,0.1)';
+          case 2: return 'rgba(255,212,35,0.2)';
+          default: return 'white';
+      }
+
+  }
+
 }

@@ -8,9 +8,11 @@
 
 <div class="grid">
     <div class="sm:col-12 md:col-12 lg:col-12 xl:col-12" *ngFor="let item of anuncios">
-        <div style="background: white; border-top: 5px solid #464646;" class="anuncios mt-4">
+        <div
+        [ngStyle]="{'background': getColor(item.important_release)}"
+        style="border-top: 5px solid #464646;" class="anuncios mt-4">
             <div>
-                <p-card header="{{item.title_release}}" subheader="SECRETARIA">
+                <p-card header="{{item.title_release}}" subheader="{{item.sender_release}}">
                     <p>
                         {{ item.sms_release }}
                     </p>
