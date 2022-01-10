@@ -27,4 +27,5 @@ export interface Usuario {
     Users_name_login: string;
     Users_career_login: string;
     Users_ci_login: number;
+    Users_status_login: number;
 }

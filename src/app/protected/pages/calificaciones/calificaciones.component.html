@@ -8,45 +8,45 @@
 
 <div class="grid">
   <div class="col-12">
-    <div class="card">
-      <p-table [value]="calificacion" [scrollable]="true" styleClass="p-datatable-gridlines" [resizableColumns]="false" [autoLayout]="true">
-        <ng-template pTemplate="header">
-          <tr class="tr-header">
-            <th [width]="1400">Asignatura</th>
-            <th class="flex justify-content-center">Sigla</th>
-            <th class="flex justify-content-center">F1</th>
-            <th class="flex justify-content-center">S1</th>
-            <th class="flex justify-content-center">1er</th>
-            <th class="flex justify-content-center">F2</th>
-            <th class="flex justify-content-center">S2</th>
-            <th class="flex justify-content-center">2do</th>
-            <th class="flex justify-content-center">F3</th>
-            <th class="flex justify-content-center">S3</th>
-            <th class="flex justify-content-center">3er</th>
-            <th class="flex justify-content-center">FINAL</th>
-            <th class="flex justify-content-center">2IN</th>
-            <th class="flex justify-content-center">NOTA</th>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-item>
+    <div class="card" style="overflow-x:auto;">
+      <table>
+        <thead>
           <tr>
-            <td>{{item.name_subject}}</td>
-            <td class="flex justify-content-center">{{item.cod_subject}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'border-left': '2px solid black', 'background': 'rgba(70,70,70,0.05)'}">{{item.forfirst_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(70,70,70,0.05)'}">{{item.sumfirst_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(255,212,35,0.5)'}">{{item.first_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'border-left': '2px solid black', 'background': 'rgba(70,70,70,0.05)'}">{{item.forsecond_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(70,70,70,0.05)'}">{{item.sumsecond_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(255,212,35,0.5)'}">{{item.second_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'border-left': '2px solid black', 'background': 'rgba(70,70,70,0.05)'}">{{item.forthird_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(70,70,70,0.05)'}">{{item.sumthird_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'border-right': '2px solid black', 'background': 'rgba(255,212,35,0.5)'}">{{item.third_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(70,70,70,0.3)', 'font-weight': 'bold'}">{{item.final_calification}}</td>
-            <td class="flex justify-content-center">{{item.instance_calification}}</td>
-            <td class="flex justify-content-center" [ngStyle]="{'background': getColor(item.finalnote_calification), 'font-weight': 'bold'}">{{item.finalnote_calification}}</td>
+            <th>Asignatura</th>
+            <th>Sigla</th>
+            <th>F1</th>
+            <th>S1</th>
+            <th>1er</th>
+            <th>F2</th>
+            <th>S2</th>
+            <th>2do</th>
+            <th>F3</th>
+            <th>S3</th>
+            <th>3er</th>
+            <th>FINAL</th>
+            <th>2IN</th>
+            <th>NOTA</th>
           </tr>
-        </ng-template>
-      </p-table>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of calificacion">
+            <td style="text-align: start;">{{item.name_subject}}</td>
+            <td>{{item.cod_subject}}</td>
+            <td [ngStyle]="{'border-left': '2px solid black', 'background': 'rgba(70,70,70,0.05)'}">{{item.forfirst_calification}}</td>
+            <td [ngStyle]="{'background': 'rgba(70,70,70,0.05)'}">{{item.sumfirst_calification}}</td>
+            <td [ngStyle]="{'background': 'rgba(255,212,35,0.5)'}">{{item.first_calification}}</td>
+            <td [ngStyle]="{'border-left': '2px solid black', 'background': 'rgba(70,70,70,0.05)'}">{{item.forsecond_calification}}</td>
+            <td [ngStyle]="{'background': 'rgba(70,70,70,0.05)'}">{{item.sumsecond_calification}}</td>
+            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(255,212,35,0.5)'}">{{item.second_calification}}</td>
+            <td [ngStyle]="{'border-left': '2px solid black', 'background': 'rgba(70,70,70,0.05)'}">{{item.forthird_calification}}</td>
+            <td [ngStyle]="{'background': 'rgba(70,70,70,0.05)'}">{{item.sumthird_calification}}</td>
+            <td [ngStyle]="{'border-right': '2px solid black', 'background': 'rgba(255,212,35,0.5)'}">{{item.third_calification}}</td>
+            <td class="flex justify-content-center" [ngStyle]="{'background': 'rgba(70,70,70,0.3)', 'font-weight': 'bold'}">{{item.final_calification}}</td>
+            <td>{{item.instance_calification}}</td>
+            <td [ngStyle]="{'background': getColor(item.finalnote_calification), 'font-weight': 'bold'}">{{item.finalnote_calification}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

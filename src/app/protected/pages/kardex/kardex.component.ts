@@ -29,9 +29,9 @@ export class KardexComponent implements OnInit {
     getColor(status: any) {
 
         switch (status) {
-            case 'APROBADO': return 'rgba(2,185,213,0.4)';
-            case 'REPROBADO': return 'rgba(234,55,77,0.4)';
-            default: return 'rgba(70,70,70,0.2)';
+            case 'APROBADO': return 'rgba(2,185,213,0.8)';
+            case 'REPROBADO': return 'rgba(234,55,77,0.8)';
+            default: return 'rgba(70,70,70,0.8)';
         }
 
     }

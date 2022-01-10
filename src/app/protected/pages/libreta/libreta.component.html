@@ -6,7 +6,53 @@
     </div>
 </div>
 
-<div class="grid">
+<div class="grid flex justify-content-center">
+    <div class="sm:col-12 md:col-12 lg:col-4 xl:col-4" *ngFor="let item of libreta">
+        <div class="card" [ngStyle]="{'background': getColor(item.status_programation)}" style="box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);">
+            <div class="card-title card">
+                <p>{{ item.name_subject }}</p>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Sigla</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.cod_subject }}</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Curso</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.course_subject }}</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Requisito</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.requirement_subject }}</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col flex justify-content-end">
+                    <p class="programacion-title">Estado</p>
+                </div>
+                <div class="col flex justify-content-start">
+                    <p>{{ item.start_subjectassign }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="grid">
     <div class="col-12">
         <div class="card">
             <p-table [value]="libreta" [scrollable]="true" styleClass="p-datatable-gridlines">
@@ -39,4 +85,4 @@
             </p-table>
         </div>
     </div>
-</div>
+</div> -->

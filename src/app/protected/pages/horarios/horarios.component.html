@@ -8,38 +8,37 @@
 
 <div class="grid">
     <div class="col-12">
-        <div class="card">
-            <p-table [value]="horarios" [scrollable]="true" styleClass="p-datatable-gridlines">
-                <ng-template pTemplate="header">
-                    <tr class="tr-header">
-                        <th>Materia</th>
-                        <th class="flex justify-content-center">Sigla</th>
-                        <th class="flex justify-content-center">Día</th>
-                        <th class="flex justify-content-center">Hora de inicio</th>
-                        <th class="flex justify-content-center">Hora de fin</th>
-                        <th class="flex justify-content-center">Meet</th>
-                    </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-item>
+        <div class="card" style="overflow-x:auto;">
+            <table>
+                <thead>
                     <tr>
-                        <td [width]="800">{{item.name_subject}}</td>
-                        <td class="flex justify-content-center">{{item.cod_subject}}</td>
-                        <td class="flex justify-content-center">
+                        <th>Materia</th>
+                        <th>Sigla</th>
+                        <th>Día</th>
+                        <th>Hora</th>
+                        <th>Meet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of horarios">
+                        <td style="text-align: start;">{{item.name_subject}}</td>
+                        <td>{{item.cod_subject}}</td>
+                        <td>
                             <p-tag *ngIf="item.monday_schedule" severity="success" class="mr-1" value="{{item.monday_schedule | lunes}}"></p-tag>
                             <p-tag *ngIf="item.tuesday_schedule" severity="success" class="mr-1" value="{{item.tuesday_schedule | martes}}"></p-tag>
-                            <p-tag *ngIf="item.wednesday_schedule" severity="success" class="mr-1" value="{{item.wednesday_schedule | miercoles}}"></p-tag>
-                            <p-tag *ngIf="item.thursday_schedule" severity="success" class="mr-1" value="{{item.thursday_schedule | jueves}}"></p-tag>
+                            <p-tag *ngIf="item.wednesday_schedule" severity="success" class="mr-1" value="{{item.wednesday_schedule | miercoles}}">
+                            </p-tag>
+                            <p-tag *ngIf="item.thursday_schedule" severity="success" class="mr-1" value="{{item.thursday_schedule | jueves}}">
+                            </p-tag>
                             <p-tag *ngIf="item.friday_schedule" severity="success" class="mr-1" value="{{item.friday_schedule | viernes}}"></p-tag>
-                            <p-tag *ngIf="item.saturday_schedule" severity="success" class="mr-1" value="{{item.saturday_schedule | sabado}}"></p-tag>
+                            <p-tag *ngIf="item.saturday_schedule" severity="success" class="mr-1" value="{{item.saturday_schedule | sabado}}">
+                            </p-tag>
                         </td>
-                        <td class="flex justify-content-center">{{item.start_hour}}</td>
-                        <td class="flex justify-content-center">{{item.end_hour}}</td>
-                        <td class="flex justify-content-center">
-                            <a href="">Acceder</a>
-                        </td>
+                        <td>{{item.start_hour}} - {{item.end_hour}}</td>
+                        <td><a href="">Acceder</a></td>
                     </tr>
-                </ng-template>
-            </p-table>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

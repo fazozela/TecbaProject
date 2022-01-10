@@ -3,12 +3,30 @@
     color: white;
     font-size: 1.6rem;
 }
-th{
-    font-size: 1.1rem;
+
+table
+{
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+  border: 1px solid rgba(68, 72, 109, 0.4);
 }
-.tr-header{
-    background-color: #44486d;
+th, td
+{
+ padding-inline: 0.2rem;
+ padding-block: 1rem;
 }
-.tr-header th{
+th
+{
+    background-color: #464646;
     color: white;
+}
+td
+{
+    text-align: center;
+    padding-inline: 10px;
+}
+tbody td
+{
+    border: 1px solid rgba(68, 72, 109, 0.1);
 }
