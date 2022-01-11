@@ -28,6 +28,12 @@ import { MiercolesPipe } from './pipes/miercoles.pipe';
 import { JuevesPipe } from './pipes/jueves.pipe';
 import { ViernesPipe } from './pipes/viernes.pipe';
 import { SabadoPipe } from './pipes/sabado.pipe';
+import { HojaComponent } from './pages/hoja/hoja.component';
+import { ListaComponent } from './pages/lista/lista.component';
+import { MeetComponent } from './pages/meet/meet.component';
+import { SyllabusComponent } from './pages/syllabus/syllabus.component';
+import { SeguimientoComponent } from './pages/seguimiento/seguimiento.component';
+import { CalificacionesDocComponent } from './pages/calificaciones-doc/calificaciones-doc.component';
 
 
 
@@ -57,7 +63,13 @@ import { SabadoPipe } from './pipes/sabado.pipe';
     MiercolesPipe,
     JuevesPipe,
     ViernesPipe,
-    SabadoPipe
+    SabadoPipe,
+    HojaComponent,
+    ListaComponent,
+    MeetComponent,
+    SyllabusComponent,
+    SeguimientoComponent,
+    CalificacionesDocComponent
   ],
   exports: [
     InicioComponent,

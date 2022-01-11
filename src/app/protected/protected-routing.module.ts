@@ -20,6 +20,12 @@ import { Docente7Component } from './pages/docente7/docente7.component';
 import { Docente8Component } from './pages/docente8/docente8.component';
 import { Docente9Component } from './pages/docente9/docente9.component';
 import { Docente10Component } from './pages/docente10/docente10.component';
+import { HojaComponent } from './pages/hoja/hoja.component';
+import { ListaComponent } from './pages/lista/lista.component';
+import { MeetComponent } from './pages/meet/meet.component';
+import { SyllabusComponent } from './pages/syllabus/syllabus.component';
+import { SeguimientoComponent } from './pages/seguimiento/seguimiento.component';
+import { CalificacionesDocComponent } from './pages/calificaciones-doc/calificaciones-doc.component';
 
 const routes: Routes =
   [
@@ -38,16 +44,12 @@ const routes: Routes =
           {path: 'libreta', component: LibretaComponent},
           {path: 'recursos', component: RecursosComponent},
           {path: 'saeta', component: SaetaComponent},
-          {path: 'docente1', component: Docente1Component},
-          {path: 'docente2', component: Docente2Component},
-          {path: 'docente3', component: Docente3Component},
-          {path: 'docente4', component: Docente4Component},
-          {path: 'docente5', component: Docente5Component},
-          {path: 'docente6', component: Docente6Component},
-          {path: 'docente7', component: Docente7Component},
-          {path: 'docente8', component: Docente8Component},
-          {path: 'docente9', component: Docente9Component},
-          {path: 'docente10', component: Docente10Component},
+          {path: 'hoja', component: HojaComponent},
+          {path: 'listas', component: ListaComponent},
+          {path: 'meet', component: MeetComponent},
+          {path: 'syllabus', component: SyllabusComponent},
+          {path: 'seguimiento', component: SeguimientoComponent},
+          {path: 'calificacionesDoc', component: CalificacionesDocComponent},
         ]
     }
   ];
